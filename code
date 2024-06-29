@@ -1,0 +1,23 @@
+
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.18;
+
+contract smart {
+    function testRequire(uint x) public pure {
+    
+        require(x > 50, "Input must be greater than 5 ");
+    }
+
+    function testRevert(uint y) public pure {
+        if (y <= 50) {
+            revert("Input must be less than 5 ");
+        }
+    }
+
+    uint public num=50;
+
+    function testAssert() public view {
+   
+        assert(num == 50);
+}
+}
